@@ -35,6 +35,7 @@ Numerical attributes pdays and campaign were directly mapped into new columns.
 #### Factorial Analysis:
 Five social and economic attributes employment variation rate, consumer price index, consumer confidence index, euribor three month rate and number of employees showed promising correlation with each other. Hence, I performed factorial analysis on them, converting them into a single attribute.
 ### Exploratory Data Analysis:
+![](Images/correlation.PNG)
 #### Age:
 Majority of the people in the data set provided are middle aged people showing the imbalance in the data set. We can also see that the previous campaigns were also successful on mostly middle aged people.
 #### Job:
@@ -56,16 +57,32 @@ It also looks like the previous campaigns were more successful for people who we
 ### Model Development:
 The usual drill was followed with data normalization and train-test split. However, a thing we noticed while doing exploratory data analysis was that the data set is highly imbalanced in favour of no or 0.
 So, to counter this I did upsampling on the training set. The code for upsampling was obtained from https://github.com/gogundur and I am really grateful to her for the neat and clean code for upsampling.
-####Logistic Regression:
+
+#### Logistic Regression:
 Following results were obtained for logistic regression.
+
+![](Images/logistic%20class.PNG)
+![](Images/lr%20confusion.PNG)
 #### Support Vector Machines Classifier:
 Following results were obtained for support vector machines classifier.
+
+![](Images/svm%20class.PNG)
+![](Images/svm%20conf.PNG)
 #### Random Forest Classification:
 Following were the results obtained for random forest classification.
+
+![](Images/random%20class.PNG)
+![](Images/rand%20confusion.PNG)
 #### K Nearest Neighbors:
 Following were the results obtained for KNN classification.
+
+![](Images/knn%20class.PNG)
+![](Images/knn%20confusion.PNG)
 #### Decision trees:
 Following were the results obtained for decision trees classification.
+
+![](Images/decion%20class.PNG)
+![](Images/decision%20confusion.PNG)
 ### Summary:
 The best results were obtained from random forest classifier. But if we look at the confusion matrices, we observe that overall, decision trees performed better for both labels 1 and 0 overall. But still the performance of random forest classifier looks promising enough to be accepted as the final model. You can further modify the model to further improve its accuracy on your own.
 
